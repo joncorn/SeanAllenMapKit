@@ -15,15 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d0n-18-moR">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d0n-18-moR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="AN8-CH-csu"/>
                                 </connections>
                             </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location.north.line.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XL3-b0-UMA">
+                                <rect key="frame" x="187" y="446" width="40" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5ZL-4c-qrb"/>
+                                    <constraint firstAttribute="width" constant="40" id="JDp-e8-DHj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="d0n-18-moR" secondAttribute="bottom" id="OuQ-Lf-V42"/>
+                            <constraint firstItem="d0n-18-moR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T5i-eR-AQ5"/>
+                            <constraint firstItem="XL3-b0-UMA" firstAttribute="centerY" secondItem="d0n-18-moR" secondAttribute="centerY" constant="20" id="TPK-CU-atD"/>
+                            <constraint firstItem="d0n-18-moR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ub2-2L-jEM"/>
+                            <constraint firstItem="d0n-18-moR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bK8-7L-xHZ"/>
+                            <constraint firstItem="XL3-b0-UMA" firstAttribute="centerX" secondItem="d0n-18-moR" secondAttribute="centerX" id="rSY-r7-SgR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -35,4 +49,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location.north.line.fill" catalog="system" width="82" height="128"/>
+    </resources>
 </document>
